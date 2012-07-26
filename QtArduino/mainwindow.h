@@ -1,6 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+//Written by Chris Konstad 7/26/2012
+//Released into the public domain
+
 #include <QMainWindow>
 #include <QUdpSocket>
 #include <QTimer>
