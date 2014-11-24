@@ -46,7 +46,9 @@ void MainWindow::onPacketReceived()
     else
         ui->leDigital->setStyleSheet("QLineEdit { background-color: none }");
 
-    ui->barAnalog->setValue(analog); //slide the progress bar
+    ui->leDigital->setText("tom xue");
+
+    ui->barAnalog->setValue(33); //slide the progress bar
 
 }
 
