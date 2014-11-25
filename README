@@ -3,3 +3,7 @@ QtArduino
 
 Basic Qt application and Arduino sketch used to teach others how to make them communicate over UDP.
 Learn how to use Qt to make an Android UDP app.
+
+Setup:
+  (1) Tested work: Use a router as wifi AP, while a Android phone and SocketTool are as wifi station.
+  (2) Not work: Use Android phone as the wifi AP, and SocketTool cannot send/recv message from the phone.
