@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -41,15 +42,20 @@ void MainWindow::onPacketReceived()
     stream >> digital >> analog;    //parse the packet
 
     //Change the color of the QLineEdit
-    if(digital == 1)
+    if(digital%2 == 1)
         ui->leDigital->setStyleSheet("QLineEdit { background-color: rgb(136, 195, 240) }");
     else
         ui->leDigital->setStyleSheet("QLineEdit { background-color: none }");
 
-    ui->leDigital->setText("tom xue");
+    ui->leDigital->setText(QString::number(digital));
 
-    ui->barAnalog->setValue(33); //slide the progress bar
-
+    if(digital <= 100)
+        ui->barAnalog->setValue(digital); //slide the progress bar
+    else
+        QMessageBox::critical(0 ,
+        "critical message" , "The value received is bigger than 100?",
+        QMessageBox::Ok | QMessageBox::Default ,
+        QMessageBox::Cancel | QMessageBox::Escape ,  0 );
 }
 
 void MainWindow::sendPacket()
