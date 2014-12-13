@@ -44,7 +44,8 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>1</pointsize>
+        <family>Adobe Arabic</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="cursor">
@@ -66,6 +67,33 @@
     </item>
     <item>
      <widget class="QSlider" name="hsAnalog">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>417</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>0</width>
+        <height>5</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>0</width>
+        <height>5</height>
+       </size>
+      </property>
       <property name="maximum">
        <number>255</number>
       </property>
@@ -77,7 +105,7 @@
     <item>
      <widget class="QProgressBar" name="barAnalog">
       <property name="maximum">
-       <number>255</number>
+       <number>100</number>
       </property>
       <property name="value">
        <number>0</number>
@@ -92,7 +120,7 @@
      <x>0</x>
      <y>0</y>
      <width>435</width>
-     <height>22</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
